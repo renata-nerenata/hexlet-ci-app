@@ -2,7 +2,7 @@
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
 
-![app-flow](https://github.com/hexlet-components/hexlet-ci-app/actions/workflows/flow.yml/badge.svg)
+![app-flow](https://github.com/renata-nerenata/hexlet-ci-app/actions/workflows/flow.yml/badge.svg)
 
 ## System requirements
 
