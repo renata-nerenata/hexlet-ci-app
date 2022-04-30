@@ -2,25 +2,6 @@ name: app-flow
 # on – определяет события, которые запускают воркфлоу
 on: push
 jobs:
-  # build – произвольно выбранное имя задания
-  # их может быть больше одного
-  build:
-    # операционная система для работы воркфлоу
-    runs-on: ubuntu-latest
-    steps: # список шагов, которые надо выполнить
-      # экшен, выполняет какую-то задачу
-      # checkout – клонирует репозиторий
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-          cache: 'npm'
-      # run – произвольная bash-команда
-      # ls -la выведет содержимое текущего репозитория
-      - run: make setup
-      - run: make test
-      - run: make lint
-
   security:
     runs-on: ubuntu-latest
     steps:
@@ -29,5 +10,3 @@ jobs:
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --severity-threshold=high
